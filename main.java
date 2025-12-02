@@ -24,7 +24,7 @@ public class Main {
                     wq = lq/λ;
                     w= wq/μ
                     System.out.println("Resultados:");
-                    System.out.println("Utilizacion del sistema p: " + p(p*100) + "%");
+                    System.out.println("Utilizacion del sistema p: " + (p*100) + "%");
                     System.out.println("Numero promedio de clientes en la cola Lq: " + lq);
                     System.out.println("Tiempo promedio de espera en la cola Wq: " + wq + " horas o "+ (wq*60)+ " minutos");
                     System.out.println("Tiempo promedio en el sistema W: " + w + " horas o "+ (w*60)+ " minutos");
