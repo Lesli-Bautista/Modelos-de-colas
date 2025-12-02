@@ -37,6 +37,9 @@ public class Main {
                     μ = sc.nextInt();   
                     System.out.print("Escribe el numero de servidores c: ");
                     c = sc.nextInt();
+                    a=(double) λ / μ;
+                    p=a/c;
+                    
 
                 }
             }
