@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
        int λ, μ, c;
-        double p, lq, wq,w a, p0, sumatoria=0.0,t1,t2;
+        double p, lq, wq,w a, p0, sumatoria=0.0,t1,t2, pEspera;
         byte opcion = 0;
         do{
             System.out.println ("\n \n \tMenu");
@@ -39,6 +39,7 @@ public class Main {
                     c = sc.nextInt();
                     a=(double) λ / μ;
                     p=a/c;
+                    //Procedimiento para calcular la probabilidad de que no haya nadie en el sistem
                     for (int n=0;n<= c-1; n++){
                         sumatoria += Math.pow (a,n)/factorial (n);
                     }
@@ -46,8 +47,9 @@ public class Main {
                     t2=1/(1-p);
                     p0=1/(sumatoria+t1*t2);
                     System.out.println ("Probabilidad de que no haya nadie en el sistema: "+ p0);
-
-
+                    //Procedimiento para calcular la probabilidad de que un cliente tenga que esperar
+                    pEspera=(Math.pow (a,c)/(factorial (c)*(1-p)))*p0;
+                    System.out.println ("Probabilidad de que un cliente tenga que esperar: "+ pEspera);
                 }
                 case 3->{
 
