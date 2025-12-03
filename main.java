@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
        int λ, μ, c;
-        double p, lq, wq,w;
+        double p, lq, wq,w a, p0, sumatoria=0.0,t1,t2;
         byte opcion = 0;
         do{
             System.out.println ("\n \n \tMenu");
@@ -39,13 +39,33 @@ public class Main {
                     c = sc.nextInt();
                     a=(double) λ / μ;
                     p=a/c;
-                    
+                    for (int n=0;n<= c-1; n++){
+                        sumatoria += Math.pow (a,n)/factorial (n);
+                    }
+                    t1=Math.pow (a,c)/factorial (c);
+                    t2=1/(1-p);
+                    p0=1/(sumatoria+t1*t2);
+                    System.out.println ("Probabilidad de que no haya nadie en el sistema: "+ p0);
 
+
+                }
+                case 3->{
+
+                }
+                case 4 ->{
+                    System.out.print("Salir ");
                 }
             }
 
         }while (opción !=5);
         
+    }
+    public static double factorial (double numero){
+        if(numero == 0 || numero ==1){
+            return 1;
+        }else{
+            return numero * factorial (numero - 1);
+        } 
     }
 
 }    
