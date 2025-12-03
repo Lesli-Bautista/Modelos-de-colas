@@ -53,6 +53,9 @@ public class Main {
                     //Longitud promedio en cola
                     lq=(pEspera*p)/(1-p);
                     System.out.println ("Longitud promedio en cola: "+ lq);
+                    //Tiempo promedio de espera en la cola
+                    wq=lq/λ ;
+                    System.out.println ("Tiempo promedio de espera en la cola");
                 }
                 case 3->{
 
