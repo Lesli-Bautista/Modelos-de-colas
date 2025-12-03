@@ -50,6 +50,9 @@ public class Main {
                     //Procedimiento para calcular la probabilidad de que un cliente tenga que esperar
                     pEspera=(Math.pow (a,c)/(factorial (c)*(1-p)))*p0;
                     System.out.println ("Probabilidad de que un cliente tenga que esperar: "+ pEspera);
+                    //Longitud promedio en cola
+                    lq=(pEspera*p)/(1-p);
+                    System.out.println ("Longitud promedio en cola: "+ lq);
                 }
                 case 3->{
 
