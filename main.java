@@ -43,6 +43,7 @@ public class Main {
                     for (int n=0;n<= c-1; n++){
                         sumatoria += Math.pow (a,n)/factorial (n);
                     }
+                    System.out.println ("Resultados");
                     t1=Math.pow (a,c)/factorial (c);
                     t2=1/(1-p);
                     p0=1/(sumatoria+t1*t2);
@@ -62,6 +63,7 @@ public class Main {
                     //Numero promedio en el sistema
                     l=λ*w;
                     System.out.println ("Numero promedio en el sistema");
+                    
                 }
                 case 3->{
 
