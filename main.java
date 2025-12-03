@@ -56,13 +56,13 @@ public class Main {
                     System.out.println ("Longitud promedio en cola: "+ lq);
                     //Tiempo promedio de espera en la cola
                     wq=lq/λ ;
-                    System.out.println ("Tiempo promedio de espera en la cola");
+                    System.out.println ("Tiempo promedio de espera en la cola: "+ wq);
                     //Tiempo total en el sistema
                     w=wq+(1/μ);
-                    System.out.println ("Tiempo total en el sistema");
+                    System.out.println ("Tiempo total en el sistema: "+ w);
                     //Numero promedio en el sistema
                     l=λ*w;
-                    System.out.println ("Numero promedio en el sistema");
+                    System.out.println ("Numero promedio en el sistema: "+ l);
                     
                 }
                 case 3->{
