@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
        int λ, μ, c;
-        double p, lq, wq,w a, p0, sumatoria=0.0,t1,t2, pEspera;
+        double p, lq, wq,w, a, p0, sumatoria=0.0,t1,t2, pEspera;
         byte opcion = 0;
         do{
             System.out.println ("\n \n \tMenu");
@@ -56,6 +56,10 @@ public class Main {
                     //Tiempo promedio de espera en la cola
                     wq=lq/λ ;
                     System.out.println ("Tiempo promedio de espera en la cola");
+                    //Tiempo total en el sistema
+                    w=wq+(1/μ);
+                    System.out.println ("Tiempo total en el sistema");
+                    
                 }
                 case 3->{
 
