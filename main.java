@@ -77,15 +77,15 @@ public class Main {
                     p=λ/μ;
                     p0=(1-p)/(1-Math.pow ((p),(k+1)));
                     pk=(Math.pow (p,k))*p0;
-                    λe=λ(1-pk);
+                    λe=λ*(1-pk);
                     l=(p*(1-(k+1)*Math.pow(p,k)+k*Math.pow(p,k+1)))/((1-p)*(1-Math.pow (p, k+1)));
                     w=l/λe;
                     System.out.print("Utilizacion de sistema: "+ p); 
-                    System.out.print("Probabilidad de que no haya nadie en el sistema: "+ p0"); 
+                    System.out.print("Probabilidad de que no haya nadie en el sistema: "+ p0);
                     System.out.print("Probabilidad de rechazo: "+ pk); 
                     System.out.print("Taza efectiva de entradas aceptadas");
                     System.out.print("Longitud promedio de la cola: "+ l ); 
-                    System.out.print("Tiempo total promedio del sistema: ("+ Tiempo total promedio del sistema: " + w);
+                    System.out.print("Tiempo total promedio del sistema:"+ w);
                     break;
                     
                 }
