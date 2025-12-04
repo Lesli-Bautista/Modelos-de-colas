@@ -75,16 +75,16 @@ public class Main {
                     System.out.println("Escribe el valor del rechazo (k)");
                     k= sc.nextInt();
                     p=λ/μ;
+                    System.out.println("Utilizacion de sistema: "+ p);  
                     p0=(1-p)/(1-Math.pow ((p),(k+1)));
-                    pk=(Math.pow (p,k))*p0;
-                    λe=λ*(1-pk);
-                    l=(p*(1-(k+1)*Math.pow(p,k)+k*Math.pow(p,k+1)))/((1-p)*(1-Math.pow (p, k+1)));
-                    w=l/λe;
-                    System.out.println("Utilizacion de sistema: "+ p); 
                     System.out.println("Probabilidad de que no haya nadie en el sistema: "+ p0);
-                    System.out.println("Probabilidad de rechazo: "+ pk); 
-                    System.out.println("Taza efectiva de entradas aceptadas");
+                    pk=(Math.pow (p,k))*p0;
+                    System.out.println("Probabilidad de rechazo: "+ pk);
+                    λe=λ*(1-pk);
+                    System.out.println("Taza efectiva de entradas aceptadas: "+ λe);
+                    l=(p*(1-(k+1)*Math.pow(p,k)+k*Math.pow(p,k+1)))/((1-p)*(1-Math.pow (p, k+1)));
                     System.out.println("Longitud promedio de la cola: "+ l ); 
+                    w=l/λe;
                     System.out.println("Tiempo total promedio del sistema:"+ w);
                     break;
                     
