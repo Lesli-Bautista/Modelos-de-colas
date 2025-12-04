@@ -68,11 +68,11 @@ public class Main {
                 }
                 case 3:{
                     System.out.println("Modelo m/m/1/k"); 
-                    System.out.print("Escribe el valor del llegadas λ: ");
+                    System.out.println("Escribe el valor del llegadas λ: ");
                     λ = sc.nextInt();
-                    System.out.print("Escribe el valor del Promedio servicio μ: ");
+                    System.out.println("Escribe el valor del Promedio servicio μ: ");
                     μ = sc.nextInt();
-                    System.out.print("Escribe el valor del rechazo (k)");
+                    System.out.println("Escribe el valor del rechazo (k)");
                     k= sc.nextInt();
                     p=λ/μ;
                     p0=(1-p)/(1-Math.pow ((p),(k+1)));
@@ -80,12 +80,12 @@ public class Main {
                     λe=λ*(1-pk);
                     l=(p*(1-(k+1)*Math.pow(p,k)+k*Math.pow(p,k+1)))/((1-p)*(1-Math.pow (p, k+1)));
                     w=l/λe;
-                    System.out.print("Utilizacion de sistema: "+ p); 
-                    System.out.print("Probabilidad de que no haya nadie en el sistema: "+ p0);
-                    System.out.print("Probabilidad de rechazo: "+ pk); 
-                    System.out.print("Taza efectiva de entradas aceptadas");
-                    System.out.print("Longitud promedio de la cola: "+ l ); 
-                    System.out.print("Tiempo total promedio del sistema:"+ w);
+                    System.out.println("Utilizacion de sistema: "+ p); 
+                    System.out.println("Probabilidad de que no haya nadie en el sistema: "+ p0);
+                    System.out.println("Probabilidad de rechazo: "+ pk); 
+                    System.out.println("Taza efectiva de entradas aceptadas");
+                    System.out.println("Longitud promedio de la cola: "+ l ); 
+                    System.out.println("Tiempo total promedio del sistema:"+ w);
                     break;
                     
                 }
