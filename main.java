@@ -2,18 +2,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-       int λ, μ, c;
+       int λ, μ, c, k;
         double p, lq, wq,w, a, p0, sumatoria=0.0,t1,t2, pEspera,l;
         byte opcion = 0;
         do{
             System.out.println ("\n \n \tMenu");
             System.out.println("1. Modelo m/m/1");
             System.out.println("2.Modelo m/m/c");
-            System.out.println("5. Salir");
-            System.out.println("Opcion");
+            System.out.println("3. Modelo m/m/1/k");
+            System.out.println("4.Opcion");
             opcion = sc.nextByte();
-            swhitch (opcion) {
-                case 1 ->(opcion) {
+            switch(opcion){
+                case 1: {
                     System.out.println( "Modelo m/m/1");
                     System.out.print("Escribe el valor del llegadas λ: ");
                     λ = sc.nextInt();
@@ -22,14 +22,15 @@ public class Main {
                     p= (double) λ / μ;
                     lq =  (Math.pow(λ, 2)) / (μ*(μ - λ));
                     wq = lq/λ;
-                    w= wq/μ
+                    w=  wq/μ;
                     System.out.println("Resultados:");
                     System.out.println("Utilizacion del sistema p: " + (p*100) + "%");
                     System.out.println("Numero promedio de clientes en la cola Lq: " + lq);
                     System.out.println("Tiempo promedio de espera en la cola Wq: " + wq + " horas o "+ (wq*60)+ " minutos");
                     System.out.println("Tiempo promedio en el sistema W: " + w + " horas o "+ (w*60)+ " minutos");
+                    break;
                 }
-                case 2 -> {
+                case 2:{
                     System.out.println("Modelo m/m/c");
                     System.out.print("Escribe el valor del llegadas λ: ");
                     λ = sc.nextInt();
@@ -62,18 +63,28 @@ public class Main {
                     System.out.println ("Tiempo total en el sistema: "+ w);
                     //Numero promedio en el sistema
                     l=λ*w;
-                    System.out.println ("Numero promedio en el sistema: "+ l);
+                    System.out.println ("Numero promedio en el sistema: "+ l);   
+                    break;
+                }
+                case 3:{
+                    System.out.println("Modelo m/m/1/k"); 
+                    System.out.print("Escribe el valor del llegadas λ: ");
+                    λ = sc.nextInt();
+                    System.out.print("Escribe el valor del Promedio servicio μ: ");
+                    μ = sc.nextInt();
+                    System.out.print("Escribe el valor del rechazo (k)");
+                    k= sc.nextInt();
+                    
+                    break;
                     
                 }
-                case 3->{
-
-                }
-                case 4 ->{
+                case 4 :{
                     System.out.print("Salir ");
+                    break;
                 }
             }
 
-        }while (opción !=5);
+        }while (opcion!=4);
         
     }
     public static double factorial (double numero){
